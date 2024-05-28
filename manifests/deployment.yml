@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ajaymithireddybackend 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ajaymithireddybackend
+  template:
+    metadata:
+      labels:
+        app: ajaymithireddybackend 
+    spec:
+      containers:
+        - name: ajaymithireddybackend 
+          image: helloreges.azurecr.io/ajaymithireddybackend
+          ports:
+          - containerPort: 8000
